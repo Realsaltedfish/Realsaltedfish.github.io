@@ -45,33 +45,11 @@
   
   
   <entry>
-    <title>guestbook</title>
+    <title>about</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>tags</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>友情链接</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[<p> 友情链接</p>]]></content>
+    <content type="html"><![CDATA[<p> 这里啥都没有 ovo</p>]]></content>
     
   </entry>
   
@@ -100,6 +78,17 @@
   
   
   <entry>
+    <title>guestbook</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>标签</title>
     <link href="/"/>
     <url>/</url>
@@ -111,11 +100,22 @@
   
   
   <entry>
-    <title>about</title>
+    <title>tags</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<p> 这里啥都没有 ovo</p>]]></content>
+    <content type="html"><![CDATA[]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>友情链接</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<p> 友情链接</p>]]></content>
     
   </entry>
   
