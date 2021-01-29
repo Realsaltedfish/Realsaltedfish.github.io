@@ -17,6 +17,42 @@
       </categories>
   </entry>
   <entry>
+    <title>To my devoted ones</title>
+    <url>/2020/12/05/2020-12-5/</url>
+    <content><![CDATA[<p>Oh, I was 22 years old</p>
+<p>&nbsp;</p>
+<p>My mother told me that you learn more as you go</p>
+<p>&nbsp;</p>
+<p>But I’ve spent many nights alone</p>
+<p>&nbsp;</p>
+<p>Do I need more for me to make this house a home</p>
+<p>&nbsp;</p>
+<p>‘Cause sometimes there’s more to the story</p>
+<p>&nbsp;</p>
+<p>And they don’t know what’s going on in</p>
+<p>&nbsp;</p>
+<p>My life behind closed doors</p>
+<p>&nbsp;</p>
+<p>Maybe there is nothing wrong</p>
+<p>&nbsp;</p>
+<p>And I will keep holding on</p>
+<p>&nbsp;</p>
+<p>I know I can be strong</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>​          &emsp;        &emsp;             &emsp;    &emsp;    &emsp;                              &emsp;         &emsp;                                        ——My Blood &lt; Westlife &gt;</p>
+<hr>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span><br><span class="hljs-function"></span>&#123;<br><br>    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;just for test&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>Just For Test      <code> just for  test</code></p>
+]]></content>
+      <categories>
+        <category>胡言乱语</category>
+      </categories>
+  </entry>
+  <entry>
     <title>高精加和高精乘（正整数）</title>
     <url>/2021/01/29/2021-1-29/</url>
     <content><![CDATA[<h2 id="高精加和高精乘"><a href="#高精加和高精乘" class="headerlink" title="高精加和高精乘"></a>高精加和高精乘</h2><h6 id="仅正整数"><a href="#仅正整数" class="headerlink" title="仅正整数"></a>仅正整数</h6><h4 id="高精度加法"><a href="#高精度加法" class="headerlink" title="高精度加法"></a>高精度加法</h4><h5 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h5><p>核心：模拟笔算</p>
@@ -67,41 +103,5 @@
       <tags>
         <tag>高精</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>To my devoted ones</title>
-    <url>/2020/12/05/2020-12-5/</url>
-    <content><![CDATA[<p>Oh, I was 22 years old</p>
-<p>&nbsp;</p>
-<p>My mother told me that you learn more as you go</p>
-<p>&nbsp;</p>
-<p>But I’ve spent many nights alone</p>
-<p>&nbsp;</p>
-<p>Do I need more for me to make this house a home</p>
-<p>&nbsp;</p>
-<p>‘Cause sometimes there’s more to the story</p>
-<p>&nbsp;</p>
-<p>And they don’t know what’s going on in</p>
-<p>&nbsp;</p>
-<p>My life behind closed doors</p>
-<p>&nbsp;</p>
-<p>Maybe there is nothing wrong</p>
-<p>&nbsp;</p>
-<p>And I will keep holding on</p>
-<p>&nbsp;</p>
-<p>I know I can be strong</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>​          &emsp;        &emsp;             &emsp;    &emsp;    &emsp;                              &emsp;         &emsp;                                        ——My Blood &lt; Westlife &gt;</p>
-<hr>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span><br><span class="hljs-function"></span>&#123;<br><br>    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;just for test&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-<p>Just For Test      <code> just for  test</code></p>
-]]></content>
-      <categories>
-        <category>胡言乱语</category>
-      </categories>
   </entry>
 </search>
