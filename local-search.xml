@@ -56,7 +56,7 @@
   
   
   <entry>
-    <title>tags</title>
+    <title>guestbook</title>
     <link href="/"/>
     <url>/</url>
     
@@ -67,18 +67,7 @@
   
   
   <entry>
-    <title>文章分类</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[<p> 文章分类 ovo</p>]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>guestbook</title>
+    <title>tags</title>
     <link href="/"/>
     <url>/</url>
     
@@ -105,6 +94,17 @@
     <url>/</url>
     
     <content type="html"><![CDATA[]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>文章分类</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<p> 文章分类 ovo</p>]]></content>
     
   </entry>
   
