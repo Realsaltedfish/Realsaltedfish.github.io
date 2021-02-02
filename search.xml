@@ -17,6 +17,61 @@
       </categories>
   </entry>
   <entry>
+    <title>二分查找</title>
+    <url>/2021/02/02/2021-2-2/</url>
+    <content><![CDATA[<h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><h6 id="BinarySearch"><a href="#BinarySearch" class="headerlink" title="BinarySearch"></a>BinarySearch</h6><p>&nbsp;</p>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>类似二分法</p>
+<p>用于顺序存储结构</p>
+<h4 id="使用心得"><a href="#使用心得" class="headerlink" title="使用心得"></a>使用心得</h4><p>面对问题时有两种思考方式</p>
+<ul>
+<li>不断缩小查找范围直到找到最优解</li>
+<li>不断排除“必不可能为最优解的解”，直至最后</li>
+</ul>
+<blockquote>
+<p>我一直在想怎么来说明二分查找“一定不会漏掉最优解”，这里的第二种思考方式能很好地解释这一问题。</p>
+</blockquote>
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+<h4 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h4><p>Q：查找最接近的元素</p>
+<p>描述</p>
+<blockquote>
+<p>在一个非降序列中，查找与给定值最接近的元素。</p>
+</blockquote>
+<p>输入</p>
+<blockquote>
+<p>第一行包含一个整数n，为非降序列长度。1 &lt;= n &lt;= 100000。<br>第二行包含n个整数，为非降序列各元素。所有元素的大小均在0-1,000,000,000之间。<br>第三行包含一个整数m，为要询问的给定值个数。1 &lt;= m &lt;= 10000。<br>接下来m行，每行一个整数，为要询问最接近元素的给定值。所有给定值的大小均在0-1,000,000,000之间。</p>
+</blockquote>
+<p>输出</p>
+<blockquote>
+<p>m行，每行一个整数，为最接近相应给定值的元素值，保持输入顺序。若有多个值满足条件，输出最小的一个。</p>
+</blockquote>
+<p>样例输入</p>
+<figure class="highlight basic"><table><tr><td class="code"><pre><code class="hljs basic"><span class="hljs-number">3</span><br><span class="hljs-symbol">2 </span><span class="hljs-number">5</span> <span class="hljs-number">8</span><br><span class="hljs-number">2</span><br><span class="hljs-number">10</span><br><span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
+
+<p>y样例输出</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-number">8</span><br><span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+<h6 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h6><figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a[],<span class="hljs-keyword">int</span> n,<span class="hljs-keyword">int</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> l=<span class="hljs-number">0</span>,r=n<span class="hljs-number">-1</span>,m,ans=<span class="hljs-number">0x3f3f3f3f</span>;<br>    <span class="hljs-keyword">while</span>(l&lt;=r)<br>    &#123;<br>        m=l+(r-l)/<span class="hljs-number">2</span>;<br>        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">abs</span>(a[m]-x)&lt;<span class="hljs-built_in">abs</span>(ans-x))<br>        ans=a[m];<br>        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">abs</span>(a[m]-x)==<span class="hljs-built_in">abs</span>(ans-x))<br>        ans=min(ans,a[m]);<br>        <span class="hljs-keyword">if</span>(a[m]&lt;x)<br>        l=m+<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a[m]&gt;x)<br>        r=m<span class="hljs-number">-1</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">break</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> ans;   <br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> n,m,a[<span class="hljs-number">100001</span>];<br>    <span class="hljs-built_in">cin</span>&gt;&gt;n;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>    <span class="hljs-built_in">cin</span>&gt;&gt;a[i];<br>    <span class="hljs-built_in">cin</span>&gt;&gt;m;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;m;i++)<br>    &#123;<br>        <span class="hljs-keyword">int</span> x;<br>        <span class="hljs-built_in">cin</span>&gt;&gt;x;<br>        x=find(a,n,x);<br>        <span class="hljs-built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="hljs-built_in">endl</span>;<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h6 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h6><ul>
+<li>L4 ~ L21为二分查找</li>
+<li>考虑将中间的值与要找的数”x”做差，算绝对值，比较中间值与”x”的大小<strong>假设中间值小于”x”，那么中间值左侧的数据与”x”差的绝对值会更大，必不可能为最优解，因此舍弃</strong></li>
+<li>用中间值计算得到的结果已经判断过，因此查找时<code>r=m-1</code>或者<code>l=m+1</code>不会造成漏解</li>
+<li>L7中<code>while(l&lt;=r)</code>说明查找范围包含两端的数据</li>
+</ul>
+]]></content>
+      <categories>
+        <category>算法学习</category>
+      </categories>
+      <tags>
+        <tag>基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>指针变量学习笔记</title>
     <url>/2021/01/30/2021-1-30/</url>
     <content><![CDATA[<h2 id="指针变量学习笔记"><a href="#指针变量学习笔记" class="headerlink" title="指针变量学习笔记"></a>指针变量学习笔记</h2><h4 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h4><p>指针变量是一种变量类型（好像是废话）（但是个人认为这句话特别重要）</p>
