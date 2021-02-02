@@ -366,7 +366,7 @@ img[srcset] {
     --post-link-color: #1589e9;
     --link-hover-color: #30a9de;
     --link-hover-bg-color: #364151;
-    --navbar-bg-color: #424153;
+    --navbar-bg-color: #181c27;
     --navbar-text-color: #d0d0d0;
   }
   :root:not([data-user-color-scheme]) img,
@@ -436,7 +436,7 @@ img[srcset] {
   --post-link-color: #1589e9;
   --link-hover-color: #30a9de;
   --link-hover-bg-color: #364151;
-  --navbar-bg-color: #424153;
+  --navbar-bg-color: #181c27;
   --navbar-text-color: #d0d0d0;
 }
 [data-user-color-scheme='dark'] img,
