@@ -120,44 +120,11 @@
   
   
   <entry>
-    <title>文章分类</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[<p> 文章分类 ovo</p>]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>guestbook</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>about</title>
     <link href="/"/>
     <url>/</url>
     
     <content type="html"><![CDATA[<p> 一个普通的男生</p><p>现就读于湖北某大学计算机学院</p><p>喜欢折腾，喜欢整活</p><p>因菜而学</p><p>用QQ比用微信多</p><p><del>花括号换行（doge）</del></p><p><del>讨厌写注释（doge）</del></p><p>有幸结识大佬<a href="http://www.noobzyk.top/">Ekennis</a>，一起从零开始准备比赛（虽然比我厉害多了）</p><p>写blog大概是为了记录大学生活吧</p><p>以上</p>]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>tags</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[]]></content>
     
   </entry>
   
@@ -175,11 +142,11 @@
   
   
   <entry>
-    <title>tags</title>
+    <title>文章分类</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p> 文章分类 ovo</p>]]></content>
     
   </entry>
   
@@ -191,6 +158,39 @@
     <url>/</url>
     
     <content type="html"><![CDATA[<p> 友情链接</p>]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>tags</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>tags</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>guestbook</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[]]></content>
     
   </entry>
   
