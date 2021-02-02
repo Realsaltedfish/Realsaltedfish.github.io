@@ -131,6 +131,17 @@
   
   
   <entry>
+    <title>友情链接</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<p> 友情链接</p>]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>guestbook</title>
     <link href="/"/>
     <url>/</url>
@@ -158,17 +169,6 @@
     <url>/</url>
     
     <content type="html"><![CDATA[]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>友情链接</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[<p> 友情链接</p>]]></content>
     
   </entry>
   
