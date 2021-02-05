@@ -1,143 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>To my devoted ones</title>
-    <url>/2020/12/05/2020-12-5/</url>
-    <content><![CDATA[<p>Oh, I was 22 years old</p>
-<p>&nbsp;</p>
-<p>My mother told me that you learn more as you go</p>
-<p>&nbsp;</p>
-<p>But I’ve spent many nights alone</p>
-<p>&nbsp;</p>
-<p>Do I need more for me to make this house a home</p>
-<p>&nbsp;</p>
-<p>‘Cause sometimes there’s more to the story</p>
-<p>&nbsp;</p>
-<p>And they don’t know what’s going on in</p>
-<p>&nbsp;</p>
-<p>My life behind closed doors</p>
-<p>&nbsp;</p>
-<p>Maybe there is nothing wrong</p>
-<p>&nbsp;</p>
-<p>And I will keep holding on</p>
-<p>&nbsp;</p>
-<p>I know I can be strong</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>​          &emsp;        &emsp;             &emsp;    &emsp;    &emsp;                              &emsp;         &emsp;                                        ——My Blood &lt; Westlife &gt;</p>
-<hr>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span><br><span class="hljs-function"></span>&#123;<br><br>    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;just for test&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-<p>Just For Test      <code> just for  test</code></p>
-]]></content>
-      <categories>
-        <category>胡言乱语</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>指针变量学习笔记</title>
-    <url>/2021/01/30/2021-1-30/</url>
-    <content><![CDATA[<h2 id="指针变量学习笔记"><a href="#指针变量学习笔记" class="headerlink" title="指针变量学习笔记"></a>指针变量学习笔记</h2><h4 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h4><p>指针变量是一种变量类型（好像是废话）（但是个人认为这句话特别重要）</p>
-<p>指针变量的值：某一内存地址的编号（这个内存地址上存有一个变量，就说这个指针指向这个变量；如果这个内存地址上没有存任何东西，就说这个指针是空指针）</p>
-<blockquote>
-<p>或许用一种类比的方法更容易理解：</p>
-<p>你面前有五个袋子，从左到右依次排列，分别编号一二三四五；</p>
-<p>定义一个int变量<code>int a=9</code>，假设存放在第三个袋子中。好，现在打开第三个袋子，你看到 “9”这个数字。</p>
-<p>定义一个指针变量p，指向a，假设指针p存放在第二个袋子中。好，现在打开第二个袋子，你看到的是 “第三个袋子” 这样一行字。</p>
-</blockquote>
-<h4 id="怎么用"><a href="#怎么用" class="headerlink" title="怎么用"></a>怎么用</h4><h5 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h5><p>例如：声明一个指针p，这个指针p指向一个int类型的变量a，代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> a = <span class="hljs-number">12345</span>;   <span class="hljs-comment">//随便想的一个数，没啥特殊意思</span><br><span class="hljs-keyword">int</span> *p = &amp;a;<br></code></pre></td></tr></table></figure>
-
-<p>解释一下：<code>int *p</code> 里面<code>int *</code>是变量类型，表示 “一个指向int类型变量的指针” ，<code>p</code> 是变量名，<code>&amp;a</code> 中&amp;是 “取址符号” ，<code>&amp;a</code>表示a的内存地址。</p>
-<p>上面第二行代码意思就是：声明一个变量 p ，类型是指向int变量的指针，同时给这个变量赋值，值是一串内存地址，这个内存地址上存放着一个int变量a。</p>
-<p>或许第二行写成如下形式更容易理解：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> *p;   <span class="hljs-comment">//定义一个指针变量，变量名为p</span><br>p = &amp;a;   <span class="hljs-comment">//p的值是a所在的内存地址</span><br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>按照上面的类比，&amp;a就是“第三个袋子”这样一行字，p=&amp;a就是将这个地址名赋给了p</p>
-</blockquote>
-<h5 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h5><p>用到取值符号<code>*</code>：</p>
-<p>p是这个指针变量的变量名，加上* 变成 *p 意思就是 “p所指地址上的变量的值” </p>
-<blockquote>
-<p>按照上面的类比，p就是”第三个袋子“这一行字，*p就是“第三个袋子里面的值”，也就是说 *p == a是成立的。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>算法学习</category>
-      </categories>
-      <tags>
-        <tag>基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>起点</title>
-    <url>/2020/11/26/2020-11-26/</url>
-    <content><![CDATA[<h1 id="起点"><a href="#起点" class="headerlink" title="起点"></a>起点</h1><p>我一直在想要怎样以一个较为正式的开头来开启我的博客之旅，之后觉得大可不必。怎样开头都算是开头，如果说我直接进入正题 ，没了开头，其实也问题不大。现在的我，在武汉大学信息学部国软教学楼B4-201教室，现在的时间是21：27，今天是11月26日，在2020年，我写下了，一篇名为《起点》的博客。</p>
-<p>从上上周起，我开始学习C++，然后参加了几天前的新生赛。</p>
-<p>然后沉迷于代码之中，无法自拔……以至于……以至于高数掉了几节课，英语小测差点不及格？（wawa大哭）</p>
-<p>我不知道未来会怎么样，但是捣鼓这个东西，的确给了我快乐。我意识到我是喜欢这个东西的。所以我选择“冲冲冲”。有幸遇到了学长学姐，有幸遇到了同专业的、有着同样想法的同学，有幸看着身边的人跟我一样，从零基础开始努力，有幸听了ACM宣讲……我遇见过不那么快乐的事，也遇上了很多很棒的事，你看这个世界是复杂的，看不太懂，你看这一行行代码也挺复杂的。</p>
-<p>我想要，走上这条路，我想要将宝贵的大学时光分一些给它，即使是从零开始，即使是暂时远远落后。我不知道将会怎样，我也不必想将来会怎样，我只需要知道：这一刻我是快乐的，我确实是在为一个目标努力着，它仿佛就在眼前，触手可及。我会试着，会努力安排好学习生活，这是给自己一个交待。</p>
-<p>然后，我开通了许久的博客，有了第一篇它正式的内容。现在的我在自习室，时间是21：53，明天晚上有一门课的开卷考试。</p>
-<p>这是我的起点。</p>
-<p>2020/11/26</p>
-]]></content>
-      <categories>
-        <category>胡言乱语</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>高精加和高精乘（正整数）</title>
-    <url>/2021/01/29/2021-1-29/</url>
-    <content><![CDATA[<h2 id="高精加和高精乘"><a href="#高精加和高精乘" class="headerlink" title="高精加和高精乘"></a>高精加和高精乘</h2><h6 id="仅正整数"><a href="#仅正整数" class="headerlink" title="仅正整数"></a>仅正整数</h6><h4 id="高精度加法"><a href="#高精度加法" class="headerlink" title="高精度加法"></a>高精度加法</h4><h5 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h5><p>核心：模拟笔算</p>
-<p>即用数组里的每个元素来作为笔算加法竖式的每一位</p>
-<p>为规范化以及移植性，输入输出均为string</p>
-<p>步骤：</p>
-<ol>
-<li>将字符串存入数组a和b</li>
-<li>另外定义两个数组s和c，分别存储每一位的结果值和进位值</li>
-<li>c[0]的值为0，s[i]的值是(a[i]+b[i]+c[i])%10，c[i]的值是(a[i]+b[i]+c[i])/10，以此类推，完成所有位数的相加</li>
-<li>将数组元素存入新定义的string中</li>
-</ol>
-<p>注意事项：</p>
-<blockquote>
-<ul>
-<li>对数组int a[10]的理解：包含a[0]，a[1]，a[2]，…，a[9]共10个元素</li>
-<li>string类：按顺序往里填入元素时（步骤4），用<code>str+ =  &#39;单个元素&#39;</code>，表示结束时如果用赋值的方法（比如<code>str[2] = &#39;\0&#39;;</code>），可能引起后续对该字符串的操作出错</li>
-<li>输出string类：调用函数<code> cout&lt;&lt;sum.c_str()&lt;&lt;endl;</code>（因为不能直接输出）（可以试试）</li>
-</ul>
-</blockquote>
-<p>代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getN</span><span class="hljs-params">(<span class="hljs-built_in">string</span> a)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> n=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(a[n]!=<span class="hljs-string">&#x27;\0&#x27;</span>)n++;<br>    <span class="hljs-keyword">return</span> n;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">string</span> a,b;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;a&gt;&gt;b;<br>    <span class="hljs-keyword">int</span> an=getN(a);<br>    <span class="hljs-keyword">int</span> bn=getN(b);<br>    <span class="hljs-keyword">int</span> N=an;<br>    <span class="hljs-keyword">if</span>(an&lt;bn)N=bn;<br>    <span class="hljs-keyword">int</span> aa[N]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;an;i++)aa[i]=a[an<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> bb[N]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;bn;i++)bb[i]=b[bn<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> s[N+<span class="hljs-number">1</span>],c[N+<span class="hljs-number">1</span>];<br>    c[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;N;i++)<br>    &#123;<br>        s[i]=(aa[i]+bb[i]+c[i])%<span class="hljs-number">10</span>;<br>        c[i+<span class="hljs-number">1</span>]=(aa[i]+bb[i]+c[i])/<span class="hljs-number">10</span>;<br>    &#125;<br>    s[N]=c[N];<br>    <span class="hljs-built_in">string</span> sum;<br>    <span class="hljs-keyword">if</span>(s[N]==<span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;N;i++)<br>        sum+=s[N<span class="hljs-number">-1</span>-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=N;i++)<br>        sum+=s[N-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-built_in">cout</span>&lt;&lt;sum.c_str()&lt;&lt;<span class="hljs-built_in">endl</span>;<br><br>    system(<span class="hljs-string">&quot;pause&quot;</span>);<br>    <br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-<h4 id="高精度乘法"><a href="#高精度乘法" class="headerlink" title="高精度乘法"></a>高精度乘法</h4><h5 id="实现思路-1"><a href="#实现思路-1" class="headerlink" title="实现思路"></a>实现思路</h5><p>先实现个位数乘多位的整数（输入输出均为字符串），再在经过对应补零操作后用高精加，实现高精度乘法</p>
-<blockquote>
-<p>至于为什么不用高精度累加来代替乘法，原因：肉眼可见的复杂度</p>
-</blockquote>
-<h5 id="个位数乘多位整数"><a href="#个位数乘多位整数" class="headerlink" title="个位数乘多位整数"></a>个位数乘多位整数</h5><p>注意事项：同高精度加法，不再赘述</p>
-<p>代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getN</span><span class="hljs-params">(<span class="hljs-built_in">string</span> a)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> n=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(a[n]!=<span class="hljs-string">&#x27;\0&#x27;</span>)n++;<br>    <span class="hljs-keyword">return</span> n;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> a;<br>    <span class="hljs-built_in">string</span> b;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;a&gt;&gt;b;<br>    <span class="hljs-keyword">int</span> n=getN(b);<br>    <span class="hljs-keyword">int</span> bb[n];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>    bb[i]=b[n<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> c[n+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">int</span> s[n+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>    &#123;<br>        s[i]=(a*bb[i]+c[i])%<span class="hljs-number">10</span>;<br>        c[i+<span class="hljs-number">1</span>]=(a*bb[i]+c[i])/<span class="hljs-number">10</span>;<br>    &#125;<br>    s[n]=c[n];<br>    <span class="hljs-built_in">string</span> r;<br>    <span class="hljs-keyword">if</span>(s[n]==<span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>        r+=s[n<span class="hljs-number">-1</span>-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=n;i++)<br>        r+=s[n-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-built_in">cout</span>&lt;&lt;r.c_str()&lt;&lt;<span class="hljs-built_in">endl</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-<h5 id="多位数乘多位数"><a href="#多位数乘多位数" class="headerlink" title="多位数乘多位数"></a>多位数乘多位数</h5><p>代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getN</span><span class="hljs-params">(<span class="hljs-built_in">string</span> a)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> n=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(a[n]!=<span class="hljs-string">&#x27;\0&#x27;</span>)n++;<br>    <span class="hljs-keyword">return</span> n;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-built_in">string</span> a,<span class="hljs-built_in">string</span> b)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> an=getN(a);<br>    <span class="hljs-keyword">int</span> bn=getN(b);<br>    <span class="hljs-keyword">int</span> N=an;<br>    <span class="hljs-keyword">if</span>(an&lt;bn)N=bn;<br>    <span class="hljs-keyword">int</span> aa[N]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;an;i++)<br>        aa[i]=a[an<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> bb[N]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;bn;i++)<br>        bb[i]=b[bn<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> s[N+<span class="hljs-number">1</span>],c[N+<span class="hljs-number">1</span>];<br>    c[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;N;i++)<br>    &#123;<br>        s[i]=(aa[i]+bb[i]+c[i])%<span class="hljs-number">10</span>;<br>        c[i+<span class="hljs-number">1</span>]=(aa[i]+bb[i]+c[i])/<span class="hljs-number">10</span>;<br>    &#125;<br>    s[N]=c[N];<br>    <span class="hljs-built_in">string</span> sum;<br>    <span class="hljs-keyword">if</span>(s[N]==<span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;N;i++)<br>        sum+=s[N<span class="hljs-number">-1</span>-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=N;i++)<br>        sum+=s[N-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> sum;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">multi_1</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a,<span class="hljs-built_in">string</span> b)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> n=getN(b);<br>    <span class="hljs-keyword">int</span> bb[n];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>    bb[i]=b[n<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> c[n+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">int</span> s[n+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>    &#123;<br>        s[i]=(a*bb[i]+c[i])%<span class="hljs-number">10</span>;<br>        c[i+<span class="hljs-number">1</span>]=(a*bb[i]+c[i])/<span class="hljs-number">10</span>;<br>    &#125;<br>    s[n]=c[n];<br>    <span class="hljs-built_in">string</span> r;<br>    <span class="hljs-keyword">if</span>(s[n]==<span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>        r+=s[n<span class="hljs-number">-1</span>-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=n;i++)<br>        r+=s[n-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> r;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">add_0</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a,<span class="hljs-built_in">string</span> b)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;a;i++)<br>    &#123;<br>        b+=<span class="hljs-string">&quot;0&quot;</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> b;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">string</span> a,b;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;a&gt;&gt;b;<br>    <span class="hljs-keyword">int</span> an=getN(a);<br>    <span class="hljs-keyword">int</span> aa[an];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;an;i++)<br>    aa[i]=a[an<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-built_in">string</span> c=<span class="hljs-string">&quot;0&quot;</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;an;i++)<br>    c=add(add_0(i,multi_1(aa[i],b)),c);<br>    <span class="hljs-built_in">cout</span>&lt;&lt;c.c_str()&lt;&lt;<span class="hljs-built_in">endl</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>核心思想是模拟竖式计算</p>
-<p>注意string类的用法</p>
-<p>PS: 其实这一篇博客还是为了测试</p>
-]]></content>
-      <categories>
-        <category>算法学习</category>
-      </categories>
-      <tags>
-        <tag>高精</tag>
-      </tags>
+    <title>test</title>
+    <url>/2021/02/05/test/</url>
+    <content><![CDATA[<h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3>]]></content>
   </entry>
   <entry>
     <title>二分查找</title>
@@ -193,5 +59,144 @@
       <tags>
         <tag>基础知识</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>指针变量学习笔记</title>
+    <url>/2021/01/30/2021-1-30/</url>
+    <content><![CDATA[<h2 id="指针变量学习笔记"><a href="#指针变量学习笔记" class="headerlink" title="指针变量学习笔记"></a>指针变量学习笔记</h2><h4 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h4><p>指针变量是一种变量类型（好像是废话）（但是个人认为这句话特别重要）</p>
+<p>指针变量的值：某一内存地址的编号（这个内存地址上存有一个变量，就说这个指针指向这个变量；如果这个内存地址上没有存任何东西，就说这个指针是空指针）</p>
+<blockquote>
+<p>或许用一种类比的方法更容易理解：</p>
+<p>你面前有五个袋子，从左到右依次排列，分别编号一二三四五；</p>
+<p>定义一个int变量<code>int a=9</code>，假设存放在第三个袋子中。好，现在打开第三个袋子，你看到 “9”这个数字。</p>
+<p>定义一个指针变量p，指向a，假设指针p存放在第二个袋子中。好，现在打开第二个袋子，你看到的是 “第三个袋子” 这样一行字。</p>
+</blockquote>
+<h4 id="怎么用"><a href="#怎么用" class="headerlink" title="怎么用"></a>怎么用</h4><h5 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h5><p>例如：声明一个指针p，这个指针p指向一个int类型的变量a，代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> a = <span class="hljs-number">12345</span>;   <span class="hljs-comment">//随便想的一个数，没啥特殊意思</span><br><span class="hljs-keyword">int</span> *p = &amp;a;<br></code></pre></td></tr></table></figure>
+
+<p>解释一下：<code>int *p</code> 里面<code>int *</code>是变量类型，表示 “一个指向int类型变量的指针” ，<code>p</code> 是变量名，<code>&amp;a</code> 中&amp;是 “取址符号” ，<code>&amp;a</code>表示a的内存地址。</p>
+<p>上面第二行代码意思就是：声明一个变量 p ，类型是指向int变量的指针，同时给这个变量赋值，值是一串内存地址，这个内存地址上存放着一个int变量a。</p>
+<p>或许第二行写成如下形式更容易理解：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">int</span> *p;   <span class="hljs-comment">//定义一个指针变量，变量名为p</span><br>p = &amp;a;   <span class="hljs-comment">//p的值是a所在的内存地址</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>按照上面的类比，&amp;a就是“第三个袋子”这样一行字，p=&amp;a就是将这个地址名赋给了p</p>
+</blockquote>
+<h5 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h5><p>用到取值符号<code>*</code>：</p>
+<p>p是这个指针变量的变量名，加上* 变成 *p 意思就是 “p所指地址上的变量的值” </p>
+<blockquote>
+<p>按照上面的类比，p就是”第三个袋子“这一行字，*p就是“第三个袋子里面的值”，也就是说 *p == a是成立的。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>算法学习</category>
+      </categories>
+      <tags>
+        <tag>基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高精加和高精乘（正整数）</title>
+    <url>/2021/01/29/2021-1-29/</url>
+    <content><![CDATA[<h2 id="高精加和高精乘"><a href="#高精加和高精乘" class="headerlink" title="高精加和高精乘"></a>高精加和高精乘</h2><h6 id="仅正整数"><a href="#仅正整数" class="headerlink" title="仅正整数"></a>仅正整数</h6><h4 id="高精度加法"><a href="#高精度加法" class="headerlink" title="高精度加法"></a>高精度加法</h4><h5 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h5><p>核心：模拟笔算</p>
+<p>即用数组里的每个元素来作为笔算加法竖式的每一位</p>
+<p>为规范化以及移植性，输入输出均为string</p>
+<p>步骤：</p>
+<ol>
+<li>将字符串存入数组a和b</li>
+<li>另外定义两个数组s和c，分别存储每一位的结果值和进位值</li>
+<li>c[0]的值为0，s[i]的值是(a[i]+b[i]+c[i])%10，c[i]的值是(a[i]+b[i]+c[i])/10，以此类推，完成所有位数的相加</li>
+<li>将数组元素存入新定义的string中</li>
+</ol>
+<p>注意事项：</p>
+<blockquote>
+<ul>
+<li>对数组int a[10]的理解：包含a[0]，a[1]，a[2]，…，a[9]共10个元素</li>
+<li>string类：按顺序往里填入元素时（步骤4），用<code>str+ =  &#39;单个元素&#39;</code>，表示结束时如果用赋值的方法（比如<code>str[2] = &#39;\0&#39;;</code>），可能引起后续对该字符串的操作出错</li>
+<li>输出string类：调用函数<code> cout&lt;&lt;sum.c_str()&lt;&lt;endl;</code>（因为不能直接输出）（可以试试）</li>
+</ul>
+</blockquote>
+<p>代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getN</span><span class="hljs-params">(<span class="hljs-built_in">string</span> a)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> n=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(a[n]!=<span class="hljs-string">&#x27;\0&#x27;</span>)n++;<br>    <span class="hljs-keyword">return</span> n;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">string</span> a,b;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;a&gt;&gt;b;<br>    <span class="hljs-keyword">int</span> an=getN(a);<br>    <span class="hljs-keyword">int</span> bn=getN(b);<br>    <span class="hljs-keyword">int</span> N=an;<br>    <span class="hljs-keyword">if</span>(an&lt;bn)N=bn;<br>    <span class="hljs-keyword">int</span> aa[N]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;an;i++)aa[i]=a[an<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> bb[N]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;bn;i++)bb[i]=b[bn<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> s[N+<span class="hljs-number">1</span>],c[N+<span class="hljs-number">1</span>];<br>    c[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;N;i++)<br>    &#123;<br>        s[i]=(aa[i]+bb[i]+c[i])%<span class="hljs-number">10</span>;<br>        c[i+<span class="hljs-number">1</span>]=(aa[i]+bb[i]+c[i])/<span class="hljs-number">10</span>;<br>    &#125;<br>    s[N]=c[N];<br>    <span class="hljs-built_in">string</span> sum;<br>    <span class="hljs-keyword">if</span>(s[N]==<span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;N;i++)<br>        sum+=s[N<span class="hljs-number">-1</span>-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=N;i++)<br>        sum+=s[N-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-built_in">cout</span>&lt;&lt;sum.c_str()&lt;&lt;<span class="hljs-built_in">endl</span>;<br><br>    system(<span class="hljs-string">&quot;pause&quot;</span>);<br>    <br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="高精度乘法"><a href="#高精度乘法" class="headerlink" title="高精度乘法"></a>高精度乘法</h4><h5 id="实现思路-1"><a href="#实现思路-1" class="headerlink" title="实现思路"></a>实现思路</h5><p>先实现个位数乘多位的整数（输入输出均为字符串），再在经过对应补零操作后用高精加，实现高精度乘法</p>
+<blockquote>
+<p>至于为什么不用高精度累加来代替乘法，原因：肉眼可见的复杂度</p>
+</blockquote>
+<h5 id="个位数乘多位整数"><a href="#个位数乘多位整数" class="headerlink" title="个位数乘多位整数"></a>个位数乘多位整数</h5><p>注意事项：同高精度加法，不再赘述</p>
+<p>代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getN</span><span class="hljs-params">(<span class="hljs-built_in">string</span> a)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> n=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(a[n]!=<span class="hljs-string">&#x27;\0&#x27;</span>)n++;<br>    <span class="hljs-keyword">return</span> n;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> a;<br>    <span class="hljs-built_in">string</span> b;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;a&gt;&gt;b;<br>    <span class="hljs-keyword">int</span> n=getN(b);<br>    <span class="hljs-keyword">int</span> bb[n];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>    bb[i]=b[n<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> c[n+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">int</span> s[n+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>    &#123;<br>        s[i]=(a*bb[i]+c[i])%<span class="hljs-number">10</span>;<br>        c[i+<span class="hljs-number">1</span>]=(a*bb[i]+c[i])/<span class="hljs-number">10</span>;<br>    &#125;<br>    s[n]=c[n];<br>    <span class="hljs-built_in">string</span> r;<br>    <span class="hljs-keyword">if</span>(s[n]==<span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>        r+=s[n<span class="hljs-number">-1</span>-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=n;i++)<br>        r+=s[n-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-built_in">cout</span>&lt;&lt;r.c_str()&lt;&lt;<span class="hljs-built_in">endl</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="多位数乘多位数"><a href="#多位数乘多位数" class="headerlink" title="多位数乘多位数"></a>多位数乘多位数</h5><p>代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getN</span><span class="hljs-params">(<span class="hljs-built_in">string</span> a)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> n=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(a[n]!=<span class="hljs-string">&#x27;\0&#x27;</span>)n++;<br>    <span class="hljs-keyword">return</span> n;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-built_in">string</span> a,<span class="hljs-built_in">string</span> b)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> an=getN(a);<br>    <span class="hljs-keyword">int</span> bn=getN(b);<br>    <span class="hljs-keyword">int</span> N=an;<br>    <span class="hljs-keyword">if</span>(an&lt;bn)N=bn;<br>    <span class="hljs-keyword">int</span> aa[N]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;an;i++)<br>        aa[i]=a[an<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> bb[N]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;bn;i++)<br>        bb[i]=b[bn<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> s[N+<span class="hljs-number">1</span>],c[N+<span class="hljs-number">1</span>];<br>    c[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;N;i++)<br>    &#123;<br>        s[i]=(aa[i]+bb[i]+c[i])%<span class="hljs-number">10</span>;<br>        c[i+<span class="hljs-number">1</span>]=(aa[i]+bb[i]+c[i])/<span class="hljs-number">10</span>;<br>    &#125;<br>    s[N]=c[N];<br>    <span class="hljs-built_in">string</span> sum;<br>    <span class="hljs-keyword">if</span>(s[N]==<span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;N;i++)<br>        sum+=s[N<span class="hljs-number">-1</span>-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=N;i++)<br>        sum+=s[N-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> sum;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">multi_1</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a,<span class="hljs-built_in">string</span> b)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> n=getN(b);<br>    <span class="hljs-keyword">int</span> bb[n];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>    bb[i]=b[n<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-keyword">int</span> c[n+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">int</span> s[n+<span class="hljs-number">1</span>]=&#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>    &#123;<br>        s[i]=(a*bb[i]+c[i])%<span class="hljs-number">10</span>;<br>        c[i+<span class="hljs-number">1</span>]=(a*bb[i]+c[i])/<span class="hljs-number">10</span>;<br>    &#125;<br>    s[n]=c[n];<br>    <span class="hljs-built_in">string</span> r;<br>    <span class="hljs-keyword">if</span>(s[n]==<span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>        r+=s[n<span class="hljs-number">-1</span>-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=n;i++)<br>        r+=s[n-i]+<span class="hljs-string">&#x27;0&#x27;</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> r;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">add_0</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a,<span class="hljs-built_in">string</span> b)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;a;i++)<br>    &#123;<br>        b+=<span class="hljs-string">&quot;0&quot;</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> b;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">string</span> a,b;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;a&gt;&gt;b;<br>    <span class="hljs-keyword">int</span> an=getN(a);<br>    <span class="hljs-keyword">int</span> aa[an];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;an;i++)<br>    aa[i]=a[an<span class="hljs-number">-1</span>-i]-<span class="hljs-string">&#x27;0&#x27;</span>;<br>    <span class="hljs-built_in">string</span> c=<span class="hljs-string">&quot;0&quot;</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;an;i++)<br>    c=add(add_0(i,multi_1(aa[i],b)),c);<br>    <span class="hljs-built_in">cout</span>&lt;&lt;c.c_str()&lt;&lt;<span class="hljs-built_in">endl</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>核心思想是模拟竖式计算</p>
+<p>注意string类的用法</p>
+<p>PS: 其实这一篇博客还是为了测试</p>
+]]></content>
+      <categories>
+        <category>算法学习</category>
+      </categories>
+      <tags>
+        <tag>高精</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>To my devoted ones</title>
+    <url>/2020/12/05/2020-12-5/</url>
+    <content><![CDATA[<p>Oh, I was 22 years old</p>
+<p>&nbsp;</p>
+<p>My mother told me that you learn more as you go</p>
+<p>&nbsp;</p>
+<p>But I’ve spent many nights alone</p>
+<p>&nbsp;</p>
+<p>Do I need more for me to make this house a home</p>
+<p>&nbsp;</p>
+<p>‘Cause sometimes there’s more to the story</p>
+<p>&nbsp;</p>
+<p>And they don’t know what’s going on in</p>
+<p>&nbsp;</p>
+<p>My life behind closed doors</p>
+<p>&nbsp;</p>
+<p>Maybe there is nothing wrong</p>
+<p>&nbsp;</p>
+<p>And I will keep holding on</p>
+<p>&nbsp;</p>
+<p>I know I can be strong</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>​          &emsp;        &emsp;             &emsp;    &emsp;    &emsp;                              &emsp;         &emsp;                                        ——My Blood &lt; Westlife &gt;</p>
+<hr>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span><br><span class="hljs-function"></span>&#123;<br><br>    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;just for test&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>Just For Test      <code> just for  test</code></p>
+]]></content>
+      <categories>
+        <category>胡言乱语</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>起点</title>
+    <url>/2020/11/26/2020-11-26/</url>
+    <content><![CDATA[<h1 id="起点"><a href="#起点" class="headerlink" title="起点"></a>起点</h1><p>我一直在想要怎样以一个较为正式的开头来开启我的博客之旅，之后觉得大可不必。怎样开头都算是开头，如果说我直接进入正题 ，没了开头，其实也问题不大。现在的我，在武汉大学信息学部国软教学楼B4-201教室，现在的时间是21：27，今天是11月26日，在2020年，我写下了，一篇名为《起点》的博客。</p>
+<p>从上上周起，我开始学习C++，然后参加了几天前的新生赛。</p>
+<p>然后沉迷于代码之中，无法自拔……以至于……以至于高数掉了几节课，英语小测差点不及格？（wawa大哭）</p>
+<p>我不知道未来会怎么样，但是捣鼓这个东西，的确给了我快乐。我意识到我是喜欢这个东西的。所以我选择“冲冲冲”。有幸遇到了学长学姐，有幸遇到了同专业的、有着同样想法的同学，有幸看着身边的人跟我一样，从零基础开始努力，有幸听了ACM宣讲……我遇见过不那么快乐的事，也遇上了很多很棒的事，你看这个世界是复杂的，看不太懂，你看这一行行代码也挺复杂的。</p>
+<p>我想要，走上这条路，我想要将宝贵的大学时光分一些给它，即使是从零开始，即使是暂时远远落后。我不知道将会怎样，我也不必想将来会怎样，我只需要知道：这一刻我是快乐的，我确实是在为一个目标努力着，它仿佛就在眼前，触手可及。我会试着，会努力安排好学习生活，这是给自己一个交待。</p>
+<p>然后，我开通了许久的博客，有了第一篇它正式的内容。现在的我在自习室，时间是21：53，明天晚上有一门课的开卷考试。</p>
+<p>这是我的起点。</p>
+<p>2020/11/26</p>
+]]></content>
+      <categories>
+        <category>胡言乱语</category>
+      </categories>
   </entry>
 </search>
