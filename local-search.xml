@@ -167,17 +167,6 @@
   
   
   <entry>
-    <title>tags</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>about</title>
     <link href="/"/>
     <url>/</url>
@@ -200,22 +189,33 @@
   
   
   <entry>
-    <title>文章分类</title>
+    <title>标签</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<p> 文章分类 ovo</p>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
   </entry>
   
   
   
   <entry>
-    <title>标签</title>
+    <title>tags</title>
     <link href="/"/>
     <url>/</url>
     
     <content type="html"><![CDATA[]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>文章分类</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<p> 文章分类 ovo</p>]]></content>
     
   </entry>
   
