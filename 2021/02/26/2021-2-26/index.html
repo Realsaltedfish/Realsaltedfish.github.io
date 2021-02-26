@@ -1,0 +1,541 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#424153">
+  <meta name="description" content="">
+  <meta name="author" content="ZXY">
+  <meta name="keywords" content="">
+  <title>穷竭搜索(含dfs, bfs) - 欢迎来到zxy的世界</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/default.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Zxy's Space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/guide/">
+                <i class="iconfont icon-note"></i>
+                导航
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/posts/05.webp') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="穷竭搜索(含dfs, bfs)">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-02-26 11:33" pubdate>
+        2021年2月26日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      832 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">穷竭搜索(含dfs, bfs)</h1>
+            
+            <div class="markdown-body">
+              <h2 id="穷竭搜索"><a href="#穷竭搜索" class="headerlink" title="穷竭搜索"></a>穷竭搜索</h2><p>&nbsp;</p>
+<h4 id="暴力枚举"><a href="#暴力枚举" class="headerlink" title="暴力枚举"></a>暴力枚举</h4><p>略</p>
+<p>&nbsp;</p>
+<h4 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h4><p>深度优先搜索（图中数字代表搜索顺序）</p>
+<p><img src="/img/posts/20210226/dfs.png" srcset="/img/loading.gif"></p>
+<p>&nbsp;</p>
+<h5 id="例题-洛谷P1451"><a href="#例题-洛谷P1451" class="headerlink" title="例题 洛谷P1451"></a>例题 洛谷P1451</h5><hr>
+<h6 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h6><p>一矩形阵列由数字 00 到 99 组成，数字 11 到 99 代表细胞，细胞的定义为沿细胞数字上下左右若还是细胞数字则为同一细胞，求给定矩形阵列的细胞个数。</p>
+<h6 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h6><p>第一行两个整数代表矩阵大小 <em>n</em> 和 <em>m</em>。</p>
+<p>接下来 <em>n</em> 行，每行一个长度为 <em>m</em> 的只含字符 <code>0</code> 到 <code>9</code> 的字符串，代表这个  <em>n</em>×<em>m</em> 的矩阵。</p>
+<h6 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h6><p>一行一个整数代表细胞个数。</p>
+<h6 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h6><p>输入</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">4 </span><span class="hljs-number">10</span><br><span class="hljs-number">0234500067</span><br><span class="hljs-number">1034560500</span><br><span class="hljs-number">2045600671</span><br><span class="hljs-number">0000000089</span><br></code></pre></td></tr></table></figure>
+
+<p>输出</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h6 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-keyword">int</span> x[<span class="hljs-number">105</span>][<span class="hljs-number">105</span>],lx,ly;<br><br><span class="hljs-keyword">int</span> dy[]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>&#125;;<br><span class="hljs-keyword">int</span> dx[]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>&#125;;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a,<span class="hljs-keyword">int</span> b)</span></span><br><span class="hljs-function"></span>&#123;<br>    x[a][b]=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">4</span>;i++)<br>    &#123;<br>        <span class="hljs-keyword">int</span> xx=a+dx[i];<br>        <span class="hljs-keyword">int</span> yy=b+dy[i];<br>        <span class="hljs-keyword">if</span>(xx&gt;=<span class="hljs-number">0</span>&amp;&amp;xx&lt;lx&amp;&amp;yy&gt;=<span class="hljs-number">0</span>&amp;&amp;yy&lt;lx&amp;&amp;x[xx][yy]!=<span class="hljs-number">0</span>)<br>        dfs(xx,yy);<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;ly&gt;&gt;lx;<br>    <span class="hljs-keyword">int</span> r;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;ly;i++)<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;lx;j++)<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%1d&quot;</span>,&amp;x[i][j]);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;ly;i++)<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;lx;j++)<br>    <span class="hljs-keyword">if</span>(x[i][j]!=<span class="hljs-number">0</span>)<br>    &#123;<br>        r++;<br>        dfs(i,j);<br>    &#125;<br>    <span class="hljs-built_in">cout</span>&lt;&lt;r;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<h4 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h4><p>宽度优先搜索（数字代表搜索顺序）</p>
+<p><img src="/img/posts/20210226/bfs.png" srcset="/img/loading.gif"></p>
+<p>&nbsp;</p>
+<h5 id="例题-UVA439"><a href="#例题-UVA439" class="headerlink" title="例题 UVA439"></a>例题 UVA439</h5><hr>
+<h6 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h6><p>输入8*8的国际象棋棋盘上的2个格子（列：a<del>h，行：1</del>8），求马至少多少步从起点（键盘输入的第一个位置）跳到终点（键盘输入的第二个位置）。</p>
+<h6 id="输入输出样例-1"><a href="#输入输出样例-1" class="headerlink" title="输入输出样例"></a>输入输出样例</h6><p>输入</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">e2</span> e<span class="hljs-number">4</span><br><span class="hljs-attribute">a1</span> b<span class="hljs-number">2</span><br><span class="hljs-attribute">b2</span> c<span class="hljs-number">3</span><br><span class="hljs-attribute">a1</span> h<span class="hljs-number">8</span><br><span class="hljs-attribute">a1</span> h<span class="hljs-number">7</span><br><span class="hljs-attribute">h8</span> a<span class="hljs-number">1</span><br><span class="hljs-attribute">b1</span> c<span class="hljs-number">3</span><br><span class="hljs-attribute">f6</span> f<span class="hljs-number">6</span><br></code></pre></td></tr></table></figure>
+
+<p>输出</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">To</span> <span class="hljs-builtin-name">get</span> <span class="hljs-keyword">from</span> e2 <span class="hljs-keyword">to</span> e4 takes 2 knight moves.<br><span class="hljs-keyword">To</span> <span class="hljs-builtin-name">get</span> <span class="hljs-keyword">from</span> a1 <span class="hljs-keyword">to</span> b2 takes 4 knight moves.<br><span class="hljs-keyword">To</span> <span class="hljs-builtin-name">get</span> <span class="hljs-keyword">from</span> b2 <span class="hljs-keyword">to</span> c3 takes 2 knight moves.<br><span class="hljs-keyword">To</span> <span class="hljs-builtin-name">get</span> <span class="hljs-keyword">from</span> a1 <span class="hljs-keyword">to</span> h8 takes 6 knight moves.<br><span class="hljs-keyword">To</span> <span class="hljs-builtin-name">get</span> <span class="hljs-keyword">from</span> a1 <span class="hljs-keyword">to</span> h7 takes 5 knight moves.<br><span class="hljs-keyword">To</span> <span class="hljs-builtin-name">get</span> <span class="hljs-keyword">from</span> h8 <span class="hljs-keyword">to</span> a1 takes 6 knight moves.<br><span class="hljs-keyword">To</span> <span class="hljs-builtin-name">get</span> <span class="hljs-keyword">from</span> b1 <span class="hljs-keyword">to</span> c3 takes 1 knight moves.<br><span class="hljs-keyword">To</span> <span class="hljs-builtin-name">get</span> <span class="hljs-keyword">from</span> f6 <span class="hljs-keyword">to</span> f6 takes 0 knight moves.<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h6 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> inf 0x3f3f3f3f</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-keyword">typedef</span> <span class="hljs-built_in">pair</span>&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">int</span>&gt; p;<br><br><span class="hljs-keyword">int</span> dx[]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">-2</span>,<span class="hljs-number">-2</span>,<span class="hljs-number">-1</span>&#125;;<br><span class="hljs-keyword">int</span> dy[]=&#123;<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">-2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">-2</span>&#125;;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">bfs</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x1,<span class="hljs-keyword">int</span> y1,<span class="hljs-keyword">int</span> x2,<span class="hljs-keyword">int</span> y2)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> a[<span class="hljs-number">8</span>][<span class="hljs-number">8</span>];<br>    <span class="hljs-built_in">queue</span>&lt;p&gt; que;<br>    que.push(p(x1,y1));<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">8</span>;i++)<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">8</span>;j++)<br>    a[i][j]=inf;<br>    a[x1][y1]=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(!que.empty())<br>    &#123;<br>        p q=que.front();<br>        que.pop();<br>        <span class="hljs-keyword">if</span>(q.first==x2&amp;&amp;q.second==y2)<br>        <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">8</span>;i++)<br>        &#123;<br>            <span class="hljs-keyword">int</span> x=q.first+dx[i];<br>            <span class="hljs-keyword">int</span> y=q.second+dy[i];<br>            <span class="hljs-keyword">if</span>(x&gt;<span class="hljs-number">7</span>||x&lt;<span class="hljs-number">0</span>||y&gt;<span class="hljs-number">7</span>||y&lt;<span class="hljs-number">0</span>||a[x][y]!=inf)<span class="hljs-keyword">continue</span>;<br>            <span class="hljs-keyword">else</span><br>            &#123;<br>                a[x][y]=a[q.first][q.second]+<span class="hljs-number">1</span>;<br>                que.push(p(x,y));<br>            &#125;<br><br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> a[x2][y2];<br><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">char</span> k[<span class="hljs-number">6</span>];<br>    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%c%c%c%c%c%*c&quot;</span>,&amp;k[<span class="hljs-number">1</span>],&amp;k[<span class="hljs-number">2</span>],&amp;k[<span class="hljs-number">3</span>],&amp;k[<span class="hljs-number">4</span>],&amp;k[<span class="hljs-number">5</span>])==<span class="hljs-number">5</span>)<br>    &#123;<br>    <span class="hljs-keyword">int</span> a,b,c,d; <br>    a=k[<span class="hljs-number">1</span>]-<span class="hljs-string">&#x27;a&#x27;</span>;<br>    b=k[<span class="hljs-number">2</span>]-<span class="hljs-string">&#x27;0&#x27;</span><span class="hljs-number">-1</span>;<br>    c=k[<span class="hljs-number">4</span>]-<span class="hljs-string">&#x27;a&#x27;</span>;<br>    d=k[<span class="hljs-number">5</span>]-<span class="hljs-string">&#x27;0&#x27;</span><span class="hljs-number">-1</span>;<br>    <span class="hljs-keyword">int</span> x=bfs(a,b,c,d);<br>    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;To get from &quot;</span>&lt;&lt;k[<span class="hljs-number">1</span>]&lt;&lt;k[<span class="hljs-number">2</span>]&lt;&lt;<span class="hljs-string">&quot; to &quot;</span>&lt;&lt;k[<span class="hljs-number">4</span>]&lt;&lt;k[<span class="hljs-number">5</span>]&lt;&lt;<span class="hljs-string">&quot; takes &quot;</span>&lt;&lt;x&lt;&lt;<span class="hljs-string">&quot; knight moves.&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>另：一个关于搜索的网站<a target="_blank" rel="noopener" href="https://www.redblobgames.com/pathfinding/a-star/introduction.html">click here</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">算法学习</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/dfs/">dfs</a>
+                    
+                      <a class="hover-with-bg" href="/tags/bfs/">bfs</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/02/23/2021-2-23/">
+                        <span class="hidden-mobile">高精度计算器</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'Realsaltedfish/Realsaltedfish.github.io');
+      s.setAttribute('issue-term', 'title');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://realsaltedfish.com" target="_blank" rel="nofollow noopener"><span>Rsf</span></a> <i class="iconfont icon-codeforces"></i> <a href="http://www.noobzyk.top/" target="_blank" rel="nofollow noopener"><span>Ekennis</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
