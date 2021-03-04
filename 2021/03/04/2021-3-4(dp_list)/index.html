@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="ZXY">
   <meta name="keywords" content="">
-  <title>Codeforces Global Round 13 - 欢迎来到zxy的世界</title>
+  <title>DP_List 洛谷动态规划题单 - 欢迎来到zxy的世界</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -181,12 +181,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/posts/16.webp') no-repeat center center;
+         style="background: url('/img/posts/14.webp') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Codeforces Global Round 13">
+            <span class="h2" id="subtitle" title="DP_List 洛谷动态规划题单">
               
             </span>
 
@@ -196,8 +196,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-01 12:41" pubdate>
-        2021年3月1日 下午
+      <time datetime="2021-03-04 19:20" pubdate>
+        2021年3月4日 晚上
       </time>
     </span>
   
@@ -208,7 +208,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      373 字
+      294 字
     </span>
   
 
@@ -218,7 +218,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      5
        分钟
     </span>
   
@@ -252,27 +252,12 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Codeforces Global Round 13</h1>
+            <h1 style="display: none">DP_List 洛谷动态规划题单</h1>
             
             <div class="markdown-body">
-              <h1 id="Codeforces-Global-Round-13"><a href="#Codeforces-Global-Round-13" class="headerlink" title="Codeforces Global Round 13"></a>Codeforces Global Round 13</h1><a id="more"></a>
+              <h1 id="洛谷动态规划题单clickhere"><a href="#洛谷动态规划题单clickhere" class="headerlink" title="洛谷动态规划题单clickhere~"></a>洛谷动态规划题单<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/training/1435">clickhere~</a></h1><h2 id="线性dp"><a href="#线性dp" class="headerlink" title="线性dp"></a>线性dp</h2><h3 id="1-洛谷P1095"><a href="#1-洛谷P1095" class="headerlink" title="1. 洛谷P1095"></a>1. 洛谷P1095</h3><p>其实我也没看懂为什么是线性dp，我反正写了个二维的</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> m,s,t;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;m&gt;&gt;s&gt;&gt;t;<br>    <span class="hljs-keyword">int</span> c=m/<span class="hljs-number">10</span>;m=m%<span class="hljs-number">10</span>;<br>    <span class="hljs-keyword">int</span> cc=min(c,t);<br>    <span class="hljs-keyword">if</span>(cc*<span class="hljs-number">60</span>&gt;=s)<br>    &#123;<br>        <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;Yes&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=cc;i++)<br>        <span class="hljs-keyword">if</span>(i*<span class="hljs-number">60</span>&gt;=s)<br>        &#123;<br>            <span class="hljs-built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="hljs-built_in">endl</span>;<br>            <span class="hljs-keyword">break</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(t&lt;=c)<br>    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;No&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>&lt;&lt;cc*<span class="hljs-number">60</span>&lt;&lt;<span class="hljs-built_in">endl</span>; <br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        s-=c*<span class="hljs-number">60</span>;<br>        t-=c;<br>        <span class="hljs-keyword">int</span> dpt[t+<span class="hljs-number">1</span>][<span class="hljs-number">15</span>];<br>        <span class="hljs-built_in">memset</span>(dpt,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span>(dpt));<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;t+<span class="hljs-number">1</span>;i++)<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">15</span>;j++)<span class="hljs-comment">//dpt[i][j]指当时间还剩i秒，魔力还剩j点的时候，能跑的最远距离</span><br>        &#123;<br>            <span class="hljs-keyword">if</span>(j&lt;<span class="hljs-number">10</span>)dpt[i][j]=max(dpt[i<span class="hljs-number">-1</span>][j]+<span class="hljs-number">17</span>,dpt[i<span class="hljs-number">-1</span>][j+<span class="hljs-number">4</span>]);<br>            <span class="hljs-keyword">else</span> dpt[i][j]=<span class="hljs-number">60</span>+dpt[i<span class="hljs-number">-1</span>][j<span class="hljs-number">-10</span>];<br>        &#125;<br>        <span class="hljs-keyword">if</span>(dpt[t][m]&lt;s)<br>        <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;No&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>&lt;&lt;dpt[t][m]+c*<span class="hljs-number">60</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>        <span class="hljs-keyword">else</span><br>        &#123;<br>            <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;Yes&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>            <span class="hljs-keyword">int</span> i;<br>            <span class="hljs-keyword">for</span>(i=t<span class="hljs-number">-1</span>;i&gt;<span class="hljs-number">0</span>;i--)<br>            <span class="hljs-keyword">if</span>(dpt[i][m]&lt;s)<br>            <span class="hljs-keyword">break</span>;<br>            <span class="hljs-built_in">cout</span>&lt;&lt;i+<span class="hljs-number">1</span>+c&lt;&lt;<span class="hljs-built_in">endl</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="A-K-th-Largest-Value-1491A"><a href="#A-K-th-Largest-Value-1491A" class="headerlink" title="A K-th Largest Value (1491A)"></a>A K-th Largest Value (1491A)</h2><p>签到题</p>
-<p>代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-keyword">bool</span> a[<span class="hljs-number">200000000</span>];<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> n,x=<span class="hljs-number">0</span>,m;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;n+<span class="hljs-number">1</span>;i++)<br>    &#123;<br>        <span class="hljs-keyword">int</span> c;<br>        <span class="hljs-built_in">cin</span>&gt;&gt;c;<br>        a[i]=<span class="hljs-keyword">bool</span>(c);<br>        <span class="hljs-keyword">if</span>(c)x++;<br>    &#125;<br>    <span class="hljs-keyword">while</span>(m--)<br>    &#123;<br>        <span class="hljs-keyword">int</span> p1,p2;<br>        <span class="hljs-built_in">cin</span>&gt;&gt;p1&gt;&gt;p2;<br>        <span class="hljs-keyword">if</span>(p1==<span class="hljs-number">1</span>)<br>        &#123;<br>            <span class="hljs-keyword">if</span>(a[p2])x--;<br>            <span class="hljs-keyword">else</span> x++;<br>            a[p2]=!a[p2];<br>        &#125;<br>        <span class="hljs-keyword">else</span><br>        &#123;<br>            <span class="hljs-keyword">if</span>(p2&gt;x)<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;0&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>            <span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;1&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>        &#125;<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>&nbsp;</p>
-<h2 id="B-Minimal-Cost-1491B"><a href="#B-Minimal-Cost-1491B" class="headerlink" title="B Minimal Cost (1491B)"></a>B Minimal Cost (1491B)</h2><p>如果有相邻输入相差大于 1 的情况，可直接通过，花费为 0 ；</p>
-<p>如果输入值全相同，那么将某一个障碍先横向移动一次，然后将其横向移动或者纵向移动一次均可</p>
-<p>花费 min(v+v , u+v);</p>
-<p>其余情况把某个合适障碍横向或者纵向移动一次均可，花费 min(u , v) 。</p>
-<p>代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> t;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;t;<br>    <span class="hljs-keyword">while</span>(t--)<br>    &#123;<br>        <span class="hljs-keyword">int</span> n,u,v,test=<span class="hljs-number">0</span>,x=<span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;u&gt;&gt;v;<br>        <span class="hljs-keyword">int</span> a[n+<span class="hljs-number">1</span>];<br>        <span class="hljs-built_in">cin</span>&gt;&gt;a[<span class="hljs-number">0</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;n;i++)<br>        &#123;<br>            <span class="hljs-built_in">cin</span>&gt;&gt;a[i];<br>            <span class="hljs-keyword">if</span>(<span class="hljs-built_in">abs</span>(a[i]-a[i<span class="hljs-number">-1</span>])&gt;=<span class="hljs-number">2</span>)test=<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">if</span>(a[i]==a[i<span class="hljs-number">-1</span>])x++;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(test)<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;0&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(x==n<span class="hljs-number">-1</span>)<span class="hljs-built_in">cout</span>&lt;&lt;min(v+v,u+v)&lt;&lt;<span class="hljs-built_in">endl</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span>&lt;&lt;min(u,v)&lt;&lt;<span class="hljs-built_in">endl</span>;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>&nbsp;</p>
-<h2 id="C-Pekora-and-Trampoline-1491C"><a href="#C-Pekora-and-Trampoline-1491C" class="headerlink" title="C Pekora and Trampoline (1491C)"></a>C Pekora and Trampoline (1491C)</h2><p>题解如下（官方题解）（等我自己看懂了再补上吧……）</p>
-<p><img src="/img/posts/20210301/1491C.png" srcset="/img/loading.gif"></p>
-<p>&nbsp;</p>
 
             </div>
             <hr>
@@ -286,13 +271,15 @@
                     
                       <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/">解题报告</a>
                     
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/%E9%A2%98%E5%8D%95/">题单</a>
+                    
                   </div>
                 
                 
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>
+                      <a class="hover-with-bg" href="/tags/dp/">dp</a>
                     
                   </div>
                 
@@ -305,18 +292,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/03/04/2021-3-4(dp_list)/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">DP_List 洛谷动态规划题单</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/02/27/2021-2-27/">
-                        <span class="hidden-mobile">Codeforces Round 703&704 （div 2)</span>
+                      <a href="/2021/03/01/2021-3-1/">
+                        <span class="hidden-mobile">Codeforces Global Round 13</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
