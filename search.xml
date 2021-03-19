@@ -2,8 +2,9 @@
 <search>
   <entry>
     <title>Codeforces Round 705&amp;707 (div 2)</title>
-    <url>/2021/03/19/2021-3-19(cf#707)/</url>
-    <content><![CDATA[<h1 id="Codeforces-Round-705-amp-707-div-2"><a href="#Codeforces-Round-705-amp-707-div-2" class="headerlink" title="Codeforces Round #705&amp;707 (div 2)"></a>Codeforces Round #705&amp;707 (div 2)<a id="more"></a></h1><p>这两场实在是鸽了太久……#705那场成功渡劫上了绿名（不影响我菜）#707算是在绿名打的第一场</p>
+    <url>/2021/03/19/2021-3-19(cf707)/</url>
+    <content><![CDATA[<h1 id="Codeforces-Round-705-amp-707-div-2"><a href="#Codeforces-Round-705-amp-707-div-2" class="headerlink" title="Codeforces Round #705&amp;707 (div 2)"></a>Codeforces Round #705&amp;707 (div 2)<a id="more"></a></h1><p>&nbsp;</p>
+<p>这两场实在是鸽了太久……#705那场成功渡劫上了绿名（不影响我菜）#707算是在绿名打的第一场</p>
 <h2 id="CF-Round-705"><a href="#CF-Round-705" class="headerlink" title="CF Round #705"></a>CF Round #705</h2><h3 id="A-Anti-knapsack-1493A"><a href="#A-Anti-knapsack-1493A" class="headerlink" title="A Anti-knapsack (1493A)"></a>A Anti-knapsack (1493A)</h3><p>思维题+签到题</p>
 <p>题意大致是找一组不同的数，这些数在 1 到 n 之间，这组数里面不能有两个或多个元素的和等于 k ；</p>
 <p>显然如果 n 大于 k ，k 到 n 的数都是可以的；只需在 1 到 k 中找。考虑到一个数能分解为 ( 1 + ( k - 1 ) ) 、( 2 + ( k - 2 ) ) ……这样的形式，那么不难看出，选择 1 到 k 右半边的数字时，元素最多。</p>
