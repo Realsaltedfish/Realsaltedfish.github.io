@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#424153">
+  <meta name="description" content="">
+  <meta name="author" content="ZXY">
+  <meta name="keywords" content="">
+  <title>Codeforces Round 705&amp;707 (div 2) - 欢迎来到zxy的世界</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/default.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Zxy's Space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/guide/">
+                <i class="iconfont icon-note"></i>
+                导航
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/posts/20.webp') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Codeforces Round 705&707 (div 2)">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-19 19:46" pubdate>
+        2021年3月19日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      17
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Codeforces Round 705&amp;707 (div 2)</h1>
+            
+            <div class="markdown-body">
+              <h1 id="Codeforces-Round-705-amp-707-div-2"><a href="#Codeforces-Round-705-amp-707-div-2" class="headerlink" title="Codeforces Round #705&amp;707 (div 2)"></a>Codeforces Round #705&amp;707 (div 2)<a id="more"></a></h1><p>这两场实在是鸽了太久……#705那场成功渡劫上了绿名（不影响我菜）#707算是在绿名打的第一场</p>
+<h2 id="CF-Round-705"><a href="#CF-Round-705" class="headerlink" title="CF Round #705"></a>CF Round #705</h2><h3 id="A-Anti-knapsack-1493A"><a href="#A-Anti-knapsack-1493A" class="headerlink" title="A Anti-knapsack (1493A)"></a>A Anti-knapsack (1493A)</h3><p>思维题+签到题</p>
+<p>题意大致是找一组不同的数，这些数在 1 到 n 之间，这组数里面不能有两个或多个元素的和等于 k ；</p>
+<p>显然如果 n 大于 k ，k 到 n 的数都是可以的；只需在 1 到 k 中找。考虑到一个数能分解为 ( 1 + ( k - 1 ) ) 、( 2 + ( k - 2 ) ) ……这样的形式，那么不难看出，选择 1 到 k 右半边的数字时，元素最多。</p>
+<p>题解</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-keyword">int</span> a[<span class="hljs-number">1010</span>];<br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> t;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;t;<br>    <span class="hljs-keyword">while</span>(t--)<br>    &#123;<br>        <span class="hljs-keyword">int</span> n,k;<br>        <span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;k;<br>        <span class="hljs-built_in">cout</span>&lt;&lt;n-k+k/<span class="hljs-number">2</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>        <span class="hljs-keyword">if</span>(n-k+k/<span class="hljs-number">2</span>!=<span class="hljs-number">0</span>)<br>        &#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=k+<span class="hljs-number">1</span>;i&lt;=n;i++)<br>            <span class="hljs-built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="hljs-string">&quot; &quot;</span>;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=(k+<span class="hljs-number">1</span>)/<span class="hljs-number">2</span>;i&lt;k;i++)<br>            &#123;<br>                <span class="hljs-built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="hljs-string">&quot; &quot;</span>;             <br>            &#125;<br>            <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>        &#125;                  <br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<h3 id="B-Planet-Lapituletti-1493B"><a href="#B-Planet-Lapituletti-1493B" class="headerlink" title="B Planet Lapituletti (1493B)"></a>B Planet Lapituletti (1493B)</h3><p>模拟，某种意义上比第一题还简单 （没错我就这么幸运地到了绿名）</p>
+<p>注意哪几个数字对称，对称过去是什么数字即可</p>
+<p>题解</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">form</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a,<span class="hljs-keyword">int</span> b)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">return</span> (a*<span class="hljs-number">10</span>+b);<br>&#125;<br><br><span class="hljs-keyword">int</span> a[<span class="hljs-number">10</span>]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">8</span>,<span class="hljs-number">-1</span>&#125;;<br><br><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">test</span><span class="hljs-params">(<span class="hljs-keyword">int</span> sh,<span class="hljs-keyword">int</span> smin,<span class="hljs-keyword">int</span> h1,<span class="hljs-keyword">int</span> h2,<span class="hljs-keyword">int</span> min1,<span class="hljs-keyword">int</span> min2)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">bool</span> test=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">if</span>(a[h1]==<span class="hljs-number">-1</span>||a[h2]==<span class="hljs-number">-1</span>||a[min1]==<span class="hljs-number">-1</span>||a[min2]==<span class="hljs-number">-1</span>)<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">int</span> h=form(a[min2],a[min1]);<br>        <span class="hljs-keyword">int</span> min=form(a[h2],a[h1]);<br>        <span class="hljs-keyword">if</span>(h&gt;=sh||min&gt;=smin)<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;   <br>&#125;<br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> t;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;t;<br>    <span class="hljs-keyword">while</span>(t--)<br>&#123;<br>    <span class="hljs-keyword">int</span> sh,smin;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;sh&gt;&gt;smin;<br>    <span class="hljs-keyword">char</span> input[<span class="hljs-number">5</span>];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">5</span>;i++)<span class="hljs-built_in">cin</span>&gt;&gt;input[i];<br>    <span class="hljs-keyword">int</span> h1=input[<span class="hljs-number">0</span>]<span class="hljs-number">-48</span>;<br>    <span class="hljs-keyword">int</span> h2=input[<span class="hljs-number">1</span>]<span class="hljs-number">-48</span>;<br>    <span class="hljs-keyword">int</span> min1=input[<span class="hljs-number">3</span>]<span class="hljs-number">-48</span>;<br>    <span class="hljs-keyword">int</span> min2=input[<span class="hljs-number">4</span>]<span class="hljs-number">-48</span>;<br>    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)<br>    &#123;<br>        <span class="hljs-keyword">if</span>(test(sh,smin,h1,h2,min1,min2))<span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">else</span><br>        &#123;<br>            min2++;<br>            <span class="hljs-keyword">if</span>(min2==<span class="hljs-number">10</span>)<br>            &#123;<br>                min2=<span class="hljs-number">0</span>;<br>                min1++;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(form(min1,min2)==smin)<br>            &#123;<br>                min1=<span class="hljs-number">0</span>;min2=<span class="hljs-number">0</span>;h2++;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(h2==<span class="hljs-number">10</span>)<br>            &#123;<br>                h1++;<br>                h2=<span class="hljs-number">0</span>;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(form(h1,h2)==sh)<br>            &#123;<br>                h1=<span class="hljs-number">0</span>;h2=<span class="hljs-number">0</span>;<br>            &#125;<br><br>        &#125;<br>    &#125;<br>    <span class="hljs-built_in">cout</span>&lt;&lt;h1&lt;&lt;h2&lt;&lt;<span class="hljs-string">&quot;:&quot;</span>&lt;&lt;min1&lt;&lt;min2&lt;&lt;<span class="hljs-built_in">endl</span>;<br>&#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 id="CF-Round-707"><a href="#CF-Round-707" class="headerlink" title="CF Round #707"></a>CF Round #707</h2><h3 id="A-Alexey-and-Train-1501A"><a href="#A-Alexey-and-Train-1501A" class="headerlink" title="A Alexey and Train (1501A)"></a>A Alexey and Train (1501A)</h3><p>模拟题+签到题</p>
+<p>题解</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> t;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;t;<br>    <span class="hljs-keyword">while</span>(t--)<br>    &#123;<br>        <span class="hljs-keyword">int</span> n;<br>        <span class="hljs-built_in">cin</span>&gt;&gt;n;<br>        <span class="hljs-keyword">int</span> a[<span class="hljs-number">105</span>],b[<span class="hljs-number">105</span>],c[<span class="hljs-number">105</span>],t[<span class="hljs-number">105</span>];t[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;a[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;b[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>        <span class="hljs-built_in">cin</span>&gt;&gt;a[i]&gt;&gt;b[i];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>        &#123;<br>            <span class="hljs-built_in">cin</span>&gt;&gt;c[i];<br>            t[i]=max(t[i<span class="hljs-number">-1</span>]+(b[i<span class="hljs-number">-1</span>]-a[i<span class="hljs-number">-1</span>]+<span class="hljs-number">1</span>)/<span class="hljs-number">2</span>,b[i<span class="hljs-number">-1</span>])+c[i]+a[i]-b[i<span class="hljs-number">-1</span>];            <br>        &#125;<br>        <span class="hljs-built_in">cout</span>&lt;&lt;t[n]&lt;&lt;<span class="hljs-built_in">endl</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<h3 id="B-Napoleon-Cake-1501B"><a href="#B-Napoleon-Cake-1501B" class="headerlink" title="B Napoleon Cake (1501B)"></a>B Napoleon Cake (1501B)</h3><p>模拟，但是一般的模拟会超时，考虑优化。</p>
+<p>我的想法：因为下方的酱不会影响上方的饼， 所以考虑从后往前模拟，在把一些端点值设置为 1 的同时去除掉那些不能作为最终端点的 “ 1 ” 。最后数组中有偶数个 1 ，每两个 1 之间为“ 浸润 ”的饼。</p>
+<p>代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><br>    <span class="hljs-keyword">int</span> t;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;t;<br>    <span class="hljs-keyword">while</span>(t--)<br>    &#123;<br>        <span class="hljs-keyword">bool</span> x[<span class="hljs-number">200010</span>]=&#123;<span class="hljs-number">0</span>&#125;;<br>        <span class="hljs-keyword">int</span> a[<span class="hljs-number">200010</span>];<br>        <span class="hljs-keyword">int</span> n;<br>        <span class="hljs-built_in">cin</span>&gt;&gt;n;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>        <span class="hljs-built_in">cin</span>&gt;&gt;a[i];<br>        <span class="hljs-keyword">int</span> curr=<span class="hljs-number">200010</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=n;i&gt;<span class="hljs-number">0</span>;i--)<br>        &#123;<br>            <span class="hljs-keyword">if</span>(a[i]==<span class="hljs-number">0</span>)<span class="hljs-keyword">continue</span>;<br>            <span class="hljs-keyword">else</span><br>            &#123;<br>                <span class="hljs-keyword">if</span>(i&lt;curr)<br>                &#123;<br>                    x[i]=<span class="hljs-number">1</span>;<br>                    x[(curr=max(i-a[i],<span class="hljs-number">0</span>))]=<span class="hljs-number">1</span>;<br>                &#125;<br>                <span class="hljs-keyword">else</span><br>                &#123;<br>                    <span class="hljs-keyword">if</span>(curr&gt;max(i-a[i],<span class="hljs-number">0</span>))<br>                    &#123;<br>                        x[curr]=<span class="hljs-number">0</span>;<br>                        x[(curr=max(i-a[i],<span class="hljs-number">0</span>))]=<span class="hljs-number">1</span>;<br>                    &#125;<br>                    <span class="hljs-keyword">else</span> <span class="hljs-keyword">continue</span>;<br>                &#125;                <br>            &#125;<br>        &#125;<br>        <span class="hljs-comment">//for(int i=0;i&lt;n;i++)cout&lt;&lt;x[i]&lt;&lt;&#x27; &#x27;;cout&lt;&lt;endl;</span><br>        <span class="hljs-keyword">bool</span> test=x[<span class="hljs-number">0</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>        &#123;            <br>            <span class="hljs-built_in">cout</span>&lt;&lt;test&lt;&lt;<span class="hljs-string">&#x27; &#x27;</span>;<br>            <span class="hljs-keyword">if</span>(x[i])test=<span class="hljs-keyword">bool</span>(<span class="hljs-number">1</span>)^test;<br>        &#125;<br>        <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<p>其他方法（某大佬给出） ：</p>
+<p>碰到酱料时在两端点位置插入标识 （类似于对括号的判断），即“ 当左括号数量大于右括号的数量 ”的时候，碰到的饼是浸润的；不满足该条件时是不浸润的。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">算法学习</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/">解题报告</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%80%9D%E7%BB%B4/">思维</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%A8%A1%E6%8B%9F/">模拟</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/04/2021-3-4/">
+                        <span class="hidden-mobile">Codeforces Educational Round 105</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'Realsaltedfish/Realsaltedfish.github.io');
+      s.setAttribute('issue-term', 'title');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://realsaltedfish.com" target="_blank" rel="nofollow noopener"><span>Rsf</span></a> <i class="iconfont icon-codeforces"></i> <a href="http://www.noobzyk.top/" target="_blank" rel="nofollow noopener"><span>Ekennis</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
