@@ -199,13 +199,19 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 12 篇文章</p>
+  <p class="h4">共计 13 篇文章</p>
   <hr>
   
   
     
       
       <p class="h5">2021</p>
+    
+    <a href="/2021/05/18/2021-5-18/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">关于我过于摸鱼而忘记更新博客这档子事</span>
+      <time style="float: right;">05-18</time>
+    </a>
+  
     
     <a href="/2021/03/19/2021-3-19(cf707)/" class="list-group-item list-group-item-action">
       <span class="archive-post-title">Codeforces Round 705&amp;707 (div 2)</span>
@@ -260,14 +266,20 @@
       <time style="float: right;">01-30</time>
     </a>
   
-    
-    <a href="/2021/01/29/2021-1-29/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">高精加和高精乘（正整数）</span>
-      <time style="float: right;">01-29</time>
-    </a>
-  
 </div>
 
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/archives/2021/page/2/">2</a><a class="extend next" rel="next" href="/archives/2021/page/2/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
 

@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>关于我过于摸鱼而忘记更新博客这档子事</title>
+    <link href="/2021/05/18/2021-5-18/"/>
+    <url>/2021/05/18/2021-5-18/</url>
+    
+    <content type="html"><![CDATA[<h1 id="关于我过于摸鱼而忘记更新博客这档子事"><a href="#关于我过于摸鱼而忘记更新博客这档子事" class="headerlink" title="关于我过于摸鱼而忘记更新博客这档子事"></a>关于我过于摸鱼而忘记更新博客这档子事</h1><br><blockquote><p>人类的三大本质，是复读机、真香和鸽子。这话肯定不是鲁迅说的。</p></blockquote><p><br><a id="more"></a></p><h3 id="开始的开始"><a href="#开始的开始" class="headerlink" title="开始的开始"></a>开始的开始</h3><br><p>上个学期，因为机缘巧合接触了算法竞赛，因为机缘巧合学会了摆弄服务器，因为机缘巧合搭了这样一个没什么人看的博客（实际上也搭得很烂，很多地方都不完善，因为自己不会写前端）。</p><p>然后某个时间点一回头，发现大学的第一年已经过去大半。</p><p>刚刚开始的时候，我能一边每天写写算法题，一边挂掉英语小测，然后就能在新生赛中拿到一个签到题的气球。两道题，没有获奖，但实际上拿到气球，我就已经很满足了。甚至寒假，我也偶尔打打CF，头一次上绿名就是在寒假。</p><p>刚刚开始的时候，博客随缘更点什么东西，有时候写写题解，主要是因为懒得把代码归好档存本地，可是删掉又怪可惜的。后来就没写什么了，哪怕偶尔打了CF。</p><p>跟我一同折腾博客的好友，倒是一直坚持了下去，如今他的博客已经有了好几页文章，努力程度不是我能比。</p><p>然而很多事都在扑面而来的各种课程压力下被迫中止。我某一天发现，墙上的气球已经放了不少气，我在算法竞赛上所做的努力，好像也是在与之同样的时间段里，变得越来越少（人也越来越菜）。</p><center><img src="/img/posts/20210518/1.jpg" alt="img" style="zoom: 25%;" /><p>所以人要少摸鱼，不然什么都干不好</center></p><br><h3 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h3><br><p>说好不摸鱼，可是实际上我还是，每天，痛并快乐地摸着鱼。这不好，我是认真的，这不好。我在想，摸鱼实际上并不是我真正想做的事，我有时候在熟悉的人面前高喊：”我要学算法！我要学shell！我要学Python！“，实际上什么都没学。</p><p>我还是什么都不会。</p><p>这个时候我需要一碗像是鸡血一样的东西。<code>不在沉默中爆发,就在沉默中灭亡。</code>这话我知道，是鲁迅说的。</p><p>然后我就开始想，为什么我要选择计算机。</p><p>我可以说我喜欢计算机，我不能保证很久很久的以后我还这么想，但至少我现在是这么想的。</p><p>我想了解所有我觉得有趣的东西。</p><p>可是现实是一地鸡毛。我还是得去面对无穷无尽的繁重的大学课程，我还是被裹挟进内卷的浪潮。Archlinux配置了一半，根本不能代替win来使用。树莓派上面没有跑什么有趣的程序。《挑战程序设计》放在书架上伸手拿不到的地方，博客跟着吃了两个月的灰。</p><p>但是我想大家都一样。大家都这样。高三时候我也还能翘自习跑去打球，这些困难在人类的主观能动性面前应该是能克服的吧，哪怕人类是有极限的。</p><br><h3 id="最后的最后"><a href="#最后的最后" class="headerlink" title="最后的最后"></a>最后的最后</h3><br><p>写博客是一件耗时的事。我鸽掉了近来好几次的CF解题报告，这几次中，我从绿名掉到灰名，又从灰名回到绿名。然而这在正常的算法竞赛选手看来，应该就是“我期末考试从6分进步到了7分耶”，这样的感觉吧。</p><p>但是这些事我还得去做，我还有没补完的题，没配完的Arch，没摸完的BombLab……</p><p>而这一篇博客，算是对自己近来生活的小结……</p><p>不慌，问题不大。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>胡言乱语</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Codeforces Round 705&amp;707 (div 2)</title>
     <link href="/2021/03/19/2021-3-19(cf707)/"/>
     <url>/2021/03/19/2021-3-19(cf707)/</url>
@@ -321,11 +340,44 @@
   
   
   <entry>
-    <title>文章分类</title>
+    <title>tags</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<p> 文章分类 ovo</p>]]></content>
+    <content type="html"><![CDATA[]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>tags</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>友情链接</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<p> 友情链接</p>]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>标签</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[]]></content>
     
   </entry>
   
@@ -354,44 +406,11 @@
   
   
   <entry>
-    <title>友情链接</title>
+    <title>文章分类</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<p> 友情链接</p>]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>tags</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>tags</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>标签</title>
-    <link href="/"/>
-    <url>/</url>
-    
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p> 文章分类 ovo</p>]]></content>
     
   </entry>
   
