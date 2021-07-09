@@ -210,7 +210,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      788 字
+      824 字
     </span>
   
 
@@ -220,7 +220,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
+      11
        分钟
     </span>
   
@@ -278,9 +278,9 @@
 <p>//</p>
 <p>&nbsp;</p>
 <h3 id="D1-RPD-and-Rap-Sheet-Easy-Version-1543D1"><a href="#D1-RPD-and-Rap-Sheet-Easy-Version-1543D1" class="headerlink" title="D1 RPD and Rap Sheet (Easy Version) (1543D1)"></a>D1 RPD and Rap Sheet (Easy Version) (1543D1)</h3><p>交互题！第一次做！</p>
-<p>好题！（好耶                            算是一个数学题</p>
+<p>好题！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（算是一道数学题</p>
 <p>总之就是做出来之后非常爽</p>
-<p>观察到允许判断 n 次时，答案范围在 $0\leq ans &lt; n$ 间，故想到“从零开始一个一个试密码(过于草率的决定)”（好耶</p>
+<p>观察到允许判断 n 次时，答案范围在 $0\leq ans &lt; n$ 间，故想到“从零开始一个一个试密码(过于草率的决定)”</p>
 <p>因为在试密码的过程中，密码会变化，因此要先去掉这个变化，再测试；因为两次异或同一个数，结果不变，所以只需要再异或一次上一次试的密码就能去掉“这个变化”。</p>
 <p>举个例子：</p>
 <p>假设 n = 3，密码是 2</p>
@@ -297,7 +297,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> t;<br>    <span class="hljs-built_in">cin</span> &gt;&gt; t;<br>    <span class="hljs-keyword">while</span> (t--) &#123;<br>        <span class="hljs-keyword">int</span> n, k;<br>        <span class="hljs-built_in">cin</span> &gt;&gt; n &gt;&gt; k;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            <span class="hljs-keyword">if</span>(i == <span class="hljs-number">0</span>)<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">0</span> &lt;&lt; <span class="hljs-built_in">endl</span>;<br>            <span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span> &lt;&lt; (i ^ (i - <span class="hljs-number">1</span>)) &lt;&lt; <span class="hljs-built_in">endl</span>;<br><br>            <span class="hljs-keyword">int</span> x;<br>            <span class="hljs-built_in">cin</span> &gt;&gt; x;<br>            <span class="hljs-keyword">if</span>(x) <span class="hljs-keyword">break</span>;<br>        &#125;<br><br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>&nbsp;</p>
-<p>综上，这波捡了个大便宜（淦</p>
+<p>综上，这波捡了个大便宜（逃</p>
 
             </div>
             <hr>
