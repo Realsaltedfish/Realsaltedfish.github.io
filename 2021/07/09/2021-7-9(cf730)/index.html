@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="ZXY">
   <meta name="keywords" content="">
-  <title>关于我过于摸鱼而忘记更新博客这档子事 - 欢迎来到zxy的世界</title>
+  <title>Codeforces Round 730 (div 2) - 欢迎来到zxy的世界</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -181,12 +181,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/posts/th01.jpg') no-repeat center center;
+         style="background: url('/img/posts/touhou_1.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="关于我过于摸鱼而忘记更新博客这档子事">
+            <span class="h2" id="subtitle" title="Codeforces Round 730 (div 2)">
               
             </span>
 
@@ -196,8 +196,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-05-18 22:17" pubdate>
-        2021年5月18日 晚上
+      <time datetime="2021-07-09 23:25" pubdate>
+        2021年7月9日 晚上
       </time>
     </span>
   
@@ -208,7 +208,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      951 字
+      788 字
     </span>
   
 
@@ -218,7 +218,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      10
        分钟
     </span>
   
@@ -252,48 +252,50 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">关于我过于摸鱼而忘记更新博客这档子事</h1>
+            <h1 style="display: none">Codeforces Round 730 (div 2)</h1>
             
             <div class="markdown-body">
-              <h1 id="关于我过于摸鱼而忘记更新博客这档子事"><a href="#关于我过于摸鱼而忘记更新博客这档子事" class="headerlink" title="关于我过于摸鱼而忘记更新博客这档子事"></a>关于我过于摸鱼而忘记更新博客这档子事</h1><br>
+              <h1 id="Codeforces-Round-730-div-2"><a href="#Codeforces-Round-730-div-2" class="headerlink" title="Codeforces Round #730 (div 2)"></a>Codeforces Round #730 (div 2)<a id="more"></a></h1><p>&nbsp;</p>
+<p>第一次div2做了三题，好耶</p>
+<h2 id="CF-Round-730"><a href="#CF-Round-730" class="headerlink" title="CF Round #730"></a>CF Round #730</h2><h3 id="A-Exciting-Bets-1543A"><a href="#A-Exciting-Bets-1543A" class="headerlink" title="A Exciting Bets (1543A)"></a>A Exciting Bets (1543A)</h3><p>思维题+数学题+签到题</p>
+<p>题意大致是：给两个数，可以同增 1 或者同减 1 任意次（也可以不操作），求所能得到的变化后的两个数的最大公约数，以及到达这个结果所进行的“操作”的最小次数。</p>
+<p>公约数肯定也是两者差的公约数，所以显然操作后取得的最大公约数就是二者之差。</p>
+<p>最少操作次数 x ，满足 $(a + x)%{gcd} = 0$或者$(a - x)%{gcd} = 0$。</p>
+<p>代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> t;<br>    <span class="hljs-built_in">cin</span> &gt;&gt; t;<br>    <span class="hljs-keyword">while</span> (t--) &#123;<br>        <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> a, b, ans, ant;<br>        <span class="hljs-built_in">cin</span> &gt;&gt; a &gt;&gt; b;<br>        <span class="hljs-comment">//cout &lt;&lt; a &lt;&lt; b;</span><br>        ans = a - b;<br>        <span class="hljs-keyword">if</span> (ans &lt; <span class="hljs-number">0</span>) ans = <span class="hljs-number">0</span> - ans;<br>        <span class="hljs-keyword">if</span> (ans != <span class="hljs-number">0</span>)ant = b % ans;<br>        <span class="hljs-keyword">else</span> ant = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">if</span> ( ans - ant &lt; ant) ant = ans - ant;<br>        <span class="hljs-built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="hljs-string">&quot; &quot;</span> &lt;&lt; ant &lt;&lt; <span class="hljs-built_in">endl</span>;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<blockquote>
-<p>人类的三大本质，是复读机、真香和鸽子。这话肯定不是鲁迅说的。</p>
-</blockquote>
-<p><br><a id="more"></a></p>
-<h3 id="开始的开始"><a href="#开始的开始" class="headerlink" title="开始的开始"></a>开始的开始</h3><br>
+<p>&nbsp;</p>
+<h3 id="B-Customising-the-Track-1543B"><a href="#B-Customising-the-Track-1543B" class="headerlink" title="B Customising the Track (1543B)"></a>B Customising the Track (1543B)</h3><p>数学题，甚至不要思维（x</p>
+<p>题意就是将所有的数取整数的平均值（就是调配之后最大值和最小值相差不超过 1 ）；然后算就完事。注意开 long long (草</p>
+<p>代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> t;<br>    <span class="hljs-built_in">cin</span> &gt;&gt; t;<br>    <span class="hljs-keyword">while</span> (t--) &#123;<br>        <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> n;<br>        <span class="hljs-built_in">cin</span> &gt;&gt; n;<br>        <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> a = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> temp;<br>            <span class="hljs-built_in">cin</span> &gt;&gt; temp;<br>            a += temp;<br>        &#125;<br>        <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ans = a % n;<br>        <span class="hljs-built_in">cout</span> &lt;&lt; ans * (n - ans) &lt;&lt; <span class="hljs-built_in">endl</span>;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>上个学期，因为机缘巧合接触了算法竞赛，因为机缘巧合学会了摆弄服务器，因为机缘巧合搭了这样一个没什么人看的博客（实际上也搭得很烂，很多地方都不完善，因为自己不会写前端）。</p>
-<p>然后某个时间点一回头，发现大学的第一年已经过去大半。</p>
-<p>刚刚开始的时候，我能一边每天写写算法题，一边挂掉英语小测，然后就能在新生赛中拿到一个签到题的气球。两道题，没有获奖，但实际上拿到气球，我就已经很满足了。甚至寒假，我也偶尔打打CF，头一次上绿名就是在寒假。</p>
-<p>刚刚开始的时候，博客随缘更点什么东西，有时候写写题解，主要是因为懒得把代码归好档存本地，可是删掉又怪可惜的。后来就没写什么了，哪怕偶尔打了CF。</p>
-<p>跟我一同折腾博客的好友，倒是一直坚持了下去，如今他的博客已经有了好几页文章，努力程度不是我能比。</p>
-<p>然而很多事都在扑面而来的各种课程压力下被迫中止。我某一天发现，墙上的气球已经放了不少气，我在算法竞赛上所做的努力，好像也是在与之同样的时间段里，变得越来越少（人也越来越菜）。</p>
-<center>
+<p>&nbsp;</p>
+<h3 id="C-Need-for-Pink-Slips-1543C"><a href="#C-Need-for-Pink-Slips-1543C" class="headerlink" title="C Need for Pink Slips (1543C)"></a>C Need for Pink Slips (1543C)</h3><p>泻药，题没看懂，英语太菜了（淦</p>
+<p>据朋友说是 dp，先挖个坑在这里，补了再来写题解。</p>
+<p>//</p>
+<p>&nbsp;</p>
+<h3 id="D1-RPD-and-Rap-Sheet-Easy-Version-1543D1"><a href="#D1-RPD-and-Rap-Sheet-Easy-Version-1543D1" class="headerlink" title="D1 RPD and Rap Sheet (Easy Version) (1543D1)"></a>D1 RPD and Rap Sheet (Easy Version) (1543D1)</h3><p>交互题！第一次做！</p>
+<p>好题！（好耶                            算是一个数学题</p>
+<p>总之就是做出来之后非常爽</p>
+<p>观察到允许判断 n 次时，答案范围在 $0\leq ans &lt; n$ 间，故想到“从零开始一个一个试密码(过于草率的决定)”（好耶</p>
+<p>因为在试密码的过程中，密码会变化，因此要先去掉这个变化，再测试；因为两次异或同一个数，结果不变，所以只需要再异或一次上一次试的密码就能去掉“这个变化”。</p>
+<p>举个例子：</p>
+<p>假设 n = 3，密码是 2</p>
+<p>那么先试 0</p>
+<p>密码变成了 2 ^ 0</p>
+<p>不对，再试 1</p>
+<p>要消除 0 的影响（虽然0没有影响），我们先异或 0，再试 1</p>
+<p>密码变成了 2 ^ 0 ^ 0 ^ 1 $\rightarrow$ 2 ^ 1</p>
+<p>不对，再试 2</p>
+<p> 要消除 1 的影响，先异或 1，再试 2</p>
+<p>这一步可以看到 2 ^ 1 在异或 1 之后，恢复成了原密码 2；然后再异或 2 ，变成了 0 。</p>
+<p>实际上当密码变成 0 的时候就已经得到了正确结果。</p>
+<p>代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> t;<br>    <span class="hljs-built_in">cin</span> &gt;&gt; t;<br>    <span class="hljs-keyword">while</span> (t--) &#123;<br>        <span class="hljs-keyword">int</span> n, k;<br>        <span class="hljs-built_in">cin</span> &gt;&gt; n &gt;&gt; k;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            <span class="hljs-keyword">if</span>(i == <span class="hljs-number">0</span>)<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">0</span> &lt;&lt; <span class="hljs-built_in">endl</span>;<br>            <span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span> &lt;&lt; (i ^ (i - <span class="hljs-number">1</span>)) &lt;&lt; <span class="hljs-built_in">endl</span>;<br><br>            <span class="hljs-keyword">int</span> x;<br>            <span class="hljs-built_in">cin</span> &gt;&gt; x;<br>            <span class="hljs-keyword">if</span>(x) <span class="hljs-keyword">break</span>;<br>        &#125;<br><br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<img src="/img/posts/20210518/1.jpg" srcset="/img/loading.gif" alt="img" style="zoom: 25%;" />
-
-<p>所以人要少摸鱼，不然什么都干不好</center></p>
-<br>
-
-<h3 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h3><br>
-
-<p>说好不摸鱼，可是实际上我还是，每天，痛并快乐地摸着鱼。这不好，我是认真的，这不好。我在想，摸鱼实际上并不是我真正想做的事，我有时候在熟悉的人面前高喊：”我要学算法！我要学shell！我要学Python！“，实际上什么都没学。</p>
-<p>我还是什么都不会。</p>
-<p>这个时候我需要一碗像是鸡血一样的东西。<code>不在沉默中爆发,就在沉默中灭亡。</code>这话我知道，是鲁迅说的。</p>
-<p>然后我就开始想，为什么我要选择计算机。</p>
-<p>我可以说我喜欢计算机，我不能保证很久很久的以后我还这么想，但至少我现在是这么想的。</p>
-<p>我想了解所有我觉得有趣的东西。</p>
-<p>可是现实是一地鸡毛。我还是得去面对无穷无尽的繁重的大学课程，我还是被裹挟进内卷的浪潮。Archlinux配置了一半，根本不能代替win来使用。树莓派上面没有跑什么有趣的程序。《挑战程序设计》放在书架上伸手拿不到的地方，博客跟着吃了两个月的灰。</p>
-<p>但是我想大家都一样。大家都这样。高三时候我也还能翘自习跑去打球，这些困难在人类的主观能动性面前应该是能克服的吧，哪怕人类是有极限的。</p>
-<br>
-
-<h3 id="最后的最后"><a href="#最后的最后" class="headerlink" title="最后的最后"></a>最后的最后</h3><br>
-
-<p>写博客是一件耗时的事。我鸽掉了近来好几次的CF解题报告，这几次中，我从绿名掉到灰名，又从灰名回到绿名。然而这在正常的算法竞赛选手看来，应该就是“我期末考试从6分进步到了7分耶”，这样的感觉吧。</p>
-<p>但是这些事我还得去做，我还有没补完的题，没配完的Arch，没摸完的BombLab……</p>
-<p>而这一篇博客，算是对自己近来生活的小结……</p>
-<p>不慌，问题不大。</p>
+<p>&nbsp;</p>
+<p>综上，这波捡了个大便宜（淦</p>
 
             </div>
             <hr>
@@ -303,10 +305,21 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/">胡言乱语</a>
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">算法学习</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/">解题报告</a>
                     
                   </div>
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%80%9D%E7%BB%B4/">思维</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+                    
+                  </div>
                 
               </div>
               
@@ -317,18 +330,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/07/09/2021-7-9(cf730)/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Codeforces Round 730 (div 2)</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/03/19/2021-3-19(cf707)/">
-                        <span class="hidden-mobile">Codeforces Round 705&707 (div 2)</span>
+                      <a href="/2021/05/18/2021-5-18/">
+                        <span class="hidden-mobile">关于我过于摸鱼而忘记更新博客这档子事</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
